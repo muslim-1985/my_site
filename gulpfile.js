@@ -1,6 +1,6 @@
 var gulp           = require('gulp'),
 		gutil          = require('gulp-util' ),
-		sass           = require('gulp-sass'),
+		sass           = require('gulp-sass'), 
 		browserSync    = require('browser-sync'),
 		concat         = require('gulp-concat'),
 		uglify         = require('gulp-uglify'),
@@ -17,7 +17,7 @@ var gulp           = require('gulp'),
 
 gulp.task('common-js', function() {
 	return gulp.src([
-		'app/js/common.js',
+		'app/js/common.js'
 		])
 	.pipe(concat('common.min.js'))
 	.pipe(uglify())
@@ -27,7 +27,7 @@ gulp.task('common-js', function() {
 gulp.task('js', ['common-js'], function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
-		'app/js/common.min.js', // Всегда в конце
+		'app/js/common.min.js' // Всегда в конце
 		])
 	.pipe(concat('scripts.min.js'))
 	// .pipe(uglify()) // Минимизировать весь js (на выбор)
@@ -47,7 +47,7 @@ gulp.task('browser-sync', function() {
 });
 
 gulp.task('sass', function() {
-	return gulp.src('app/sass/**/*.sass')
+	return gulp.src('app/sass/**/*.scss')
 	.pipe(sass().on("error", notify.onError()))
 	.pipe(rename({suffix: '.min', prefix : ''}))
 	.pipe(autoprefixer(['last 15 versions']))
@@ -57,11 +57,10 @@ gulp.task('sass', function() {
 });
 
 gulp.task('watch', ['sass', 'js', 'browser-sync'], function() {
-	gulp.watch('app/sass/**/*.sass', ['sass']);
+	gulp.watch('app/sass/**/*.scss', ['sass']);
 	gulp.watch(['libs/**/*.js', 'app/js/common.js'], ['js']);
 	gulp.watch('app/*.html', browserSync.reload);
 });
-
 gulp.task('imagemin', function() {
 	return gulp.src('app/img/**/*')
 	.pipe(cache(imagemin()))
