@@ -7,13 +7,126 @@
 	/**/
 }
 
+@media only screen and (max-width : 1192px) {
+	header.main-header {
+		.servises {
+			.item {
+				h4 {
+					font-size: 1em !important;
+				}
+			}
+		}
+		section.our-advantage {
+			.check-description {
+				font-size: 1em !important;
+			}
+		}
+	}
+}
+
+
+@media only screen and (max-width : 1092px) {
+	header.main-header {
+		.bell {
+			display: none !important;
+		}
+	}
+
+	main.home-main {
+		.infographics {
+			.col {
+				i {
+					font-size: 3em !important;
+				}
+				p {
+					font-size: 0.8em !important;
+				}
+			}
+		}
+	}
+}
+
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px){
 	/**/
 	.top-menu {
 		font-size: 0.8rem;
+		.description {
+			font-size: 0.7rem !important;
+		}
+		.bell {
+			font-size: 1.2rem !important;
+			height: 30px !important;
+			width: 30px !important;
+			.fa {
+				position: relative;
+				right: 5px;
+				bottom: 3px;
+			}
+		}
 	}
+	section.servises {
+		.item {
+			padding: 0;
+			h3 {
+				font-size: 0.8rem !important;
+				color: $white;
+			}
+		}
+	}
+}
+
+//main home page
+
+main.home-main {
+
+  section.stock {	
+	.stock-attention {
+		width: 20em !important;
+		height: 20em !important;
+		.fa {
+			font-size: 15em !important;
+		}
+	}
+	.description {
+		margin-top: 2em;
+
+		h1 {
+			font-size: 3em !important;
+		}
+		h3 {
+			padding-top: 10px !important;
+			font-size: 1.5em !important;
+		}
+		h5 {
+			padding-top: 10px !important;
+			font-size: 1.2em !important;
+		}
+	}
+  }
+
+
+  main.home-main {
+  	.infographics {
+  		.col {
+  			i {
+  				font-size: 3em !important;
+  			}
+  			p {
+  				font-size: 0.8em !important;
+  			}
+  		}
+  		.contai {
+	  		.btn {
+	  			height: 55px !important;
+	  			width: 180px !important;
+	  			position: absolute;
+	  			left: 0em !important;
+	  		}
+	  	}
+  	}
+  }
 }
 
 
@@ -21,6 +134,7 @@
 @media only screen and (max-width : 768px){
 	/**/
 	header.main-header {
+
 	.mobile-menu {
 		margin-top: 10px;
 		display: block;
@@ -28,6 +142,95 @@
 	.top-menu {
 		display: none;
 	}
+	.servises {
+		.item {
+		display: none;
+	}
+		.description-mobile {
+			display: block !important;
+		}
+	}
+
+
+	section.our-advantage {
+		.check-description {
+			font-size: 1.3em !important;
+			i {
+				width: 10px !important;
+				height: 10px !important;
+				border: none;
+				background-color: $section-light-color;
+			}
+		}
+		.header-image {
+			display: none;
+		}
+	}
+  }
+
+  //main home page
+
+  main.home-main {
+
+   section.stock {  	
+  	.stock-attention {
+  		width: 12em !important;
+  		height: 12em !important;
+  		.fa {
+  			font-size: 7em !important;
+  		}
+  	}
+  	.description {
+  		margin-top: 1.5em;
+  		h1 {
+  			font-size: 1.5em !important;
+  		}
+  		h3 {
+  			padding-top: 10px !important;
+  			font-size: 1.3em !important;
+  		}
+  		h5 {
+  			padding-top: 10px !important;
+  			font-size: 1.1em !important;
+  		}
+  	}
+  	.btn {
+  		height: 55px !important;
+  		width: 180px !important;
+  		position: absolute;
+  		left: 0em !important;
+  	}
+   }
+
+   //modx description section
+
+   section.modx-description {
+   		.check-description {
+   			font-size: 1.2em !important;
+   			i {
+   				width: 10px !important;
+   				height: 10px !important;
+   				border: none;
+   				color: $black;
+   				background-color: $section-light-color;
+   			}
+   		}
+   		h3 {
+   			font-size: 1.3em;
+   			margin-left: -2em;
+   			i {
+   				font-size: 3em;
+   			}
+   		}
+   		.col-10 {
+   			margin-top: 20px;
+   		}
+   		.btn {
+   			height: 45px;
+   			width: 150px;
+   			margin-top: -10px;
+   		}
+   }
   }
 }
 
@@ -35,6 +238,86 @@
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px){
 	/**/
+	header.main-header {
+		.mobile-menu {
+			.description {
+				font-size: 0.6rem;
+			}
+		}
+
+	section.our-advantage {
+		.check-description {
+			font-size: 1em !important;
+		}
+		.col {
+			font-size: 1rem !important;
+			.btn {
+				height: 55px;
+				width: 150px;
+			}
+		}
+		
+	}	
+	}
+
+	//main home page
+
+	main.home-main {
+
+	  section.stock{	
+		.stock-attention {
+			width: 8em !important;
+			height: 8em !important;
+			.fa {
+				font-size: 6em !important;
+			}
+		}
+		.description {
+			margin-top: 1.5em;
+			h1 {
+				font-size: 1.5em !important;
+			}
+			h3 {
+				padding-top: 10px !important;
+				font-size: 1.3em !important;
+			}
+			h5 {
+				padding-top: 10px !important;
+				font-size: 0.8em !important;
+			}
+		}
+	  }
+
+	  //modx description section
+
+	  section.modx-description {
+	  		.check-description {
+	  			font-size: 1em !important;
+	  			i {
+	  				width: 10px !important;
+	  				height: 10px !important;
+	  				border: none;
+	  				color: $black;
+	  				background-color: $section-light-color;
+	  			}
+	  		}
+	  		h3 {
+	  			font-size: 1.2em;
+	  			margin-left: -2em;
+	  			i {
+	  				font-size: 3em;
+	  			}
+	  		}
+	  		.col-10 {
+	  			margin-top: 20px;
+	  		}
+	  		.btn {
+	  			height: 45px;
+	  			width: 150px;
+	  			margin-top: -10px;
+	  		}
+	  }
+	}
 }
 
 
