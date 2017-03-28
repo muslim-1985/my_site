@@ -32,12 +32,26 @@ $(function() {
        		$('.carousel-servises').owlCarousel({
        			items: 4,
        			autoplay: true,
-       			autoplayTimeout: 3000,
-       			smartSpeed:2000,
+       			nav: true,
+       			autoplayTimeout: 4000,
+       			smartSpeed: 2000,
        			navText: false,
        			loop: true,
        			smartSpeed: 700
        		}); 
+       		//owl carousel trigger nav in section servises
+       		var owl = $('.carousel-servises');
+       		owl.owlCarousel();
+       		// Go to the next item
+       		$('.owl-next').click(function() {
+       		    owl.trigger('next.owl.carousel');
+       		})
+       		// Go to the previous item
+       		$('.owl-prev').click(function() {
+       		    // With optional speed parameter
+       		    // Parameters has to be in square bracket '[]'
+       		    owl.trigger('prev.owl.carousel', [300]);
+       		})
        		//section revievs carousel
        		  $('.owl-carousel').owlCarousel({
        		  	items: 1,
@@ -45,6 +59,23 @@ $(function() {
        		  	nav: true,
        		  	navText: false,
        		  	loop: true,
+       		  	autoplay: true,
+       		  	autoplayTimeout: 4000,
+       		  	animateOut: 'slideOutDown',
+       		  	animateIn: 'flipInX',
        		  	smartSpeed: 700
-       		  });    
+       		  });
+       		  //reviev section nav carousel
+       		  var owl = $('.owl-carousel');
+       		  owl.owlCarousel();
+       		  // Go to the next item
+       		  $('.owl-next').click(function() {
+       		      owl.trigger('next.owl.carousel');
+       		  })
+       		  // Go to the previous item
+       		  $('.owl-prev').click(function() {
+       		      // With optional speed parameter
+       		      // Parameters has to be in square bracket '[]'
+       		      owl.trigger('prev.owl.carousel', [300]);
+       		  })    
 });

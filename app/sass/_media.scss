@@ -117,7 +117,7 @@ main.home-main {
   				font-size: 0.8em !important;
   			}
   		}
-  		.contai {
+  		.container {
 	  		.btn {
 	  			height: 55px !important;
 	  			width: 180px !important;
@@ -129,7 +129,22 @@ main.home-main {
   }
 }
 
-
+@media only screen and (max-width : 898px) {
+       section.infographics {
+       	 .desktop-infographics {
+       	 	display: none !important;
+       	 }
+       	 .mobile-infographics {
+       	 	display: block !important;
+       	 }
+       	 .btn {
+       	 	height: 55px !important;
+       	 	width: 180px !important;
+       	 	font-size: 1.1em !important;
+       	 	left: 0em !important;
+       	 }
+       }
+}
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px){
 	/**/
@@ -143,6 +158,9 @@ main.home-main {
 		display: none;
 	}
 	.servises {
+		.col-1 {
+			display: none;
+		}
 		.item {
 		display: none;
 	}

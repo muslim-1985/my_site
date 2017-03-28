@@ -202,6 +202,15 @@ section.servises {
 	
 	}
 	//desctop dev
+	.col-1 {
+		.owl-prev,
+		.owl-next {
+			cursor: pointer;
+		}
+		i {
+			font-size: 2em;
+		}
+	}
 	.item {
 		background-color: $white;
 		text-align: center;
@@ -359,9 +368,7 @@ main.home-main {
 				}
 			}
 		}
-		.align-self-end {
-			
-		}
+		
 		.col {
 			padding-bottom: 90px;
 			transition: all 0.4s;
@@ -375,7 +382,7 @@ main.home-main {
 			.fa-skype,
 			.fa-whatsapp,
 			.fa-envelope-o {
-				display: inline;;
+				display: inline;
 				font-size: 4.3em;
 			}
 			.fa-podcast
@@ -390,6 +397,21 @@ main.home-main {
 				position: relative;
 				font-size: 6em;
 				color: $main-color;
+			}
+		}
+		//mobile dev
+		.mobile-infographics {
+			display: none;
+			i {
+				position: relative;
+				font-size: 6em;
+				color: $main-color;
+			}
+			.fa-mobile,
+			.fa-skype,
+			.fa-whatsapp,
+			.fa-envelope-o {
+				font-size: 4.3em;
 			}
 		}
 	}
@@ -506,23 +528,35 @@ main.home-main {
 	// section reviews carousel
 
 	section.reviews-carousel {
-		min-height: 500px;
-		background-position: center;
-		&:after {
-			content : "";
-			   display: block;
-			   position: absolute;
-			   top: 0;
-			   left: 0;
-			   background-image: url(../img/images/faces-279330_1280.png);
-			   background-position: center;
-			   opacity: 0.3;
-			   width: 100%;
-			   height: 100%;
-			   z-index: -1;
+		min-height: 250px;
+		background-color: $white;
+		.reviews {
+			margin-top: 90px;
+			.owl-prev,
+			.owl-next {
+				cursor: pointer;
+				width: 40px;
+				border-radius: 100%;
+				background-color: $number-color;
+				box-sizing: border-box;
+				padding-left: 12px;
+				transition: all 0.2s;
+					&:hover {
+						background-color: $hover-description-color;
+				}
+			}
+			.fa-angle-left,
+			.fa-angle-right {
+				font-size: 2em;
+				color: $white;
+			}
 		}
-		.slide {
-			position: absolute;
+		.owl-item {
+			i {
+				font-size: 2em;
+				text-align: center;
+				color: $number-color;
+			}
 		}
 	}
 
