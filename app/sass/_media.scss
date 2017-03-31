@@ -126,6 +126,7 @@ main.home-main {
 	  		}
 	  	}
   	}
+
   }
 }
 
@@ -249,9 +250,48 @@ main.home-main {
    			margin-top: -10px;
    		}
    }
+
+  //about me
+  section.about-me {
+     .name-profession {
+     	text-align: center;
+   		h3 {
+   			font-size: 1.2em;
+   		  }
+		img {
+			display: none;
+		}
+
+   		}
+   	.description {
+   		font-size: 0.9em;
+   	}	
+  	.btn {
+  		width: 130px;
+  		height: 40px;
+     }   
+  	}
+
+  	// section reviews carousel
+
+  	section.reviews-carousel {
+  		.owl-item {
+  			font-size: 0.9em;
+  			img{
+  				display: none;
+  			}
+  		}
+ 
+    }
+
+  }
+
+footer {
+	.social-buttons>div {
+		display: inline-block !important;
+	}
   }
 }
-
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px){
@@ -335,6 +375,14 @@ main.home-main {
 	  			margin-top: -10px;
 	  		}
 	  }
+		//revievs carousel
+	  	section.reviews-carousel {
+	  		.owl-prev,
+	  		.owl-next {
+	  			display: none;
+	  		}
+	    }
+
 	}
 }
 

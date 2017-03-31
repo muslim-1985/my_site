@@ -22,6 +22,10 @@ $(function() {
           		 	var target = $(event.target);
           		 	if(target.is(".description-mobile button")) {
           		 		target.next().slideToggle("slow");
+          		 		//remove default "none" class slideToggle function
+          		 		if($(this).css("display") === 'none'){
+          		 			$(this).removeAttr('style');
+          		 		}
           		 	}
           		 }
        		$(".description-mobile button").click(handler); 
@@ -59,6 +63,7 @@ $(function() {
        		  	nav: true,
        		  	navText: false,
        		  	loop: true,
+       		  	dots: true,
        		  	autoplay: true,
        		  	autoplayTimeout: 4000,
        		  	animateOut: 'slideOutDown',
@@ -68,14 +73,22 @@ $(function() {
        		  //reviev section nav carousel
        		  var owl = $('.owl-carousel');
        		  owl.owlCarousel();
-       		  // Go to the next item
        		  $('.owl-next').click(function() {
        		      owl.trigger('next.owl.carousel');
        		  })
-       		  // Go to the previous item
        		  $('.owl-prev').click(function() {
-       		      // With optional speed parameter
-       		      // Parameters has to be in square bracket '[]'
        		      owl.trigger('prev.owl.carousel', [300]);
-       		  })    
+       		  }) 
+
+       		  //magnific-popup
+       		  $('.popup-with-form').magnificPopup({
+       		     type: 'inline',
+       		     focus: '#name',
+       		     removalDelay: 300,
+       		     mainClass: 'mfp-fade'
+       		  });  
+
+       		  //phone mask
+       		   $("#phone").mask("+7(999) 999-9999"); 
+       		   $("#phone-mask").mask("+7(999) 999-9999");
 });

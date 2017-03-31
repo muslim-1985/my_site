@@ -193,11 +193,13 @@ section.servises {
 		}
 		.btn {
 			width: 100%;
-			margin-bottom: 5px;
-			background-color: $white;
+			background-color: $number-color;
 			color: $border-color;
-			border-radius: 0;
+			border: 1px solid $hover-description-color;
 			height: 40px;
+			&:active {
+				border: 1px solid $white !important;
+			}
 		}
 	
 	}
@@ -241,14 +243,13 @@ section.servises {
 		}
 	}
 }
+
+
 section.our-advantage {
 	background-color: $section-light-color;
-	.col {
+	.col-lg-5 {
 		margin-top: 40px;
-		img {
-			width: 100%;
-			height: 100%;
-		}
+	
 		.btn {
 			margin-top: 50px;
 			margin-bottom: 30px;
@@ -264,12 +265,21 @@ section.our-advantage {
 				color: $white;
 			}
 		}
+	
 	}
-
+	.col {
+		img {
+			width: 100%;
+		}
+	}
 	.check-description {
 		margin-top: 25px;
 		font-size: 1.3rem;
 		color: $main-color;
+		transition: all 0.4s ease-in-out;
+		&:hover {
+			transform: translate(20px,0);
+		}
 		i {
 			display: inline-block;
 			width: 50px;
@@ -497,6 +507,10 @@ main.home-main {
 		position: relative;
 		.name-profession {
 			padding-top: 70px;
+			img {
+				width: 100%;
+				height: 100%;
+			} 
 			h3 {
 				color: $white;
 			}
@@ -505,7 +519,6 @@ main.home-main {
 			}
 		}
 		.quotes {
-			text-align: center;
 			font-size: 3em;
 			color: $number-color;
 		}
@@ -532,6 +545,7 @@ main.home-main {
 		background-color: $white;
 		.reviews {
 			margin-top: 90px;
+			margin-bottom: 70px;
 			.owl-prev,
 			.owl-next {
 				cursor: pointer;
@@ -560,6 +574,121 @@ main.home-main {
 		}
 	}
 
+}
+
+//footer
+
+footer {
+	min-height: 200px;
+	background-color: $footer-background;
+	color: $white;
+	.row {
+		padding-top: 70px;
+		padding-bottom: 40px;
+		.social-buttons {
+			position: relative;
+			box-sizing: border-box;
+			div {
+				padding-bottom: 10px;
+			}
+
+			i {
+				border: 1px solid $white;
+				text-align: center;
+				padding-top: 5%;
+				box-sizing: border-box;
+				font-size: 2em;
+				height: 50px;
+				width: 50px;
+				color: $footer-background;
+				background-color: $white;
+				border-radius: 100%;
+				transition: all 0.5s;
+				&:hover {
+					background-color: $footer-background;
+					color: $white;
+				}
+
+		}
+	  }
+	   .contacts {
+	   	color: $footer-font-color;
+	  	i {
+	  		font-size: 1.6em;
+	  		color: $footer-font-color;
+	  		padding-right: 0.5em;
+	  	}
+	  }
+
+	form {
+		button {
+			@include button-main;
+			background-color: $white;
+			color: $border-color;
+			border: 1px solid $white !important;
+			width: 150px;
+			height: 45px;
+			&:hover {
+				background-color: $footer-background;
+			}
+		}
+	}
+	}
+}
+
+.mfp-wrap {
+	 color: $white;
+	 padding-top: 3em !important;
+	 opacity: 0.9;
+	 .btn {
+	 	@include button-main;
+	 	background-color: $white;
+	 	color: $border-color;
+	 	border: none;
+	 	width: 150px;
+		height: 45px;
+	 }
+
+	.mfp-close {
+		position: absolute;
+		opacity: 1;
+		right: 30%;
+		top: -10%;
+		z-index: 2;
+		color: $white;
+		border: 1px solid $main-color;
+		border-radius: 100%;
+		background-color: $main-color;
+	}
+
+}
+//popup animation
+/* overlay at start */
+.mfp-fade.mfp-bg {
+  opacity: 0;
+  transition: all 0.2s ease-out;
+}
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready {
+  opacity: 0.8;
+}
+/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing {
+  opacity: 0;
+}
+
+/* content at start */
+.mfp-fade.mfp-wrap .mfp-content {
+  opacity: 0;
+  transition: all 0.2s ease-out;
+}
+/* content animate it */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+}
+/* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
 }
   
 @import "media";// Всегда в конце
