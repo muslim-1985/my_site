@@ -26,7 +26,7 @@
 
 
 @media only screen and (max-width : 1092px) {
-	header.main-header {
+	header {
 		.bell {
 			display: none !important;
 		}
@@ -149,7 +149,7 @@ main.home-main {
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px){
 	/**/
-	header.main-header {
+	header {
 
 	.mobile-menu {
 		margin-top: 10px;
@@ -224,23 +224,7 @@ main.home-main {
    //modx description section
 
    section.modx-description {
-   		.check-description {
-   			font-size: 1.2em !important;
-   			i {
-   				width: 10px !important;
-   				height: 10px !important;
-   				border: none;
-   				color: $black;
-   				background-color: $section-light-color;
-   			}
-   		}
-   		h3 {
-   			font-size: 1.3em;
-   			margin-left: -2em;
-   			i {
-   				font-size: 3em;
-   			}
-   		}
+   	
    		.col-10 {
    			margin-top: 20px;
    		}
@@ -293,10 +277,12 @@ footer {
   }
 }
 
+
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px){
 	/**/
-	header.main-header {
+	header {
 		.mobile-menu {
 			.description {
 				font-size: 0.6rem;

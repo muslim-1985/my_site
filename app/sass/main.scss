@@ -58,7 +58,7 @@ strong, b {
 a {
 	outline: none !important;
 }
-header.main-header {
+header {
 	min-height: 400px;
 
 	.mobile-menu {
@@ -96,10 +96,18 @@ header.main-header {
 		height: 90px;
 		background-color: $white;
 		border-bottom: 2px solid $section-light-color;
+		.align-items-center {
+			position: fixed;
+			background-color: $white;
+			width: 100%;
+			z-index: 2;
+			opacity: 1;
+			transition: all .4s;
+		}
 		
 		.logo img {
 			height: 90px;
-			
+			transition: all 1s;
 		}
 		.phone-description {
 			padding-left: 20px;
@@ -172,6 +180,7 @@ header.main-header {
 	}
 section.servises {
 	background-color: $white;
+	min-height: 90px;
 	text-align: center;
 	color: $border-color;
 	background-color: $white;
@@ -315,30 +324,31 @@ main.home-main {
 			.stock-attention {
 				border: 1px solid white;
 				border-radius: 100%;
-				height: 40em;
-				width: 40em;
+				height: 40rem;
+				width: 40rem;
 				color: $main-color;
 				background-color: $white;
 				text-align: center;
 				.fa {
 					box-sizing: border-box;
-					font-size: 25em;
+					font-size: 25rem;
 					position: relative;
 					top: 15%;
 				}
 			}
 			.description {
-
+				position: relative;
+				top: -40px;
 				color: $white;
 				text-align: center;
 				h1 {
-					font-size: 3em;
+					font-size: 3rem;
 				}
 				h3 {
-					padding-top: 20px;
+					padding-top: 5rem;
 				}
 				h5 {
-					padding-top: 20px;
+					padding-top: 5rem;
 				}
 			}
 			.btn {
@@ -504,9 +514,9 @@ main.home-main {
 	section.about-me {
 		background-color: $hover-description-color;
 		min-height: 200px;
-		position: relative;
+
 		.name-profession {
-			padding-top: 70px;
+			padding-top: 110px;
 			img {
 				width: 100%;
 				height: 100%;
@@ -520,6 +530,7 @@ main.home-main {
 		}
 		.quotes {
 			font-size: 3em;
+			padding-top: 7rem;
 			color: $number-color;
 		}
 		.description {
@@ -651,9 +662,8 @@ footer {
 
 	.mfp-close {
 		position: absolute;
-		opacity: 1;
 		right: 30%;
-		top: -10%;
+		opacity: 1;
 		z-index: 2;
 		color: $white;
 		border: 1px solid $main-color;
@@ -690,5 +700,99 @@ footer {
 .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
   opacity: 0;
 }
-  
+
+
+
+//page details
+header.details-header {
+	min-height: 50px;
+}
+//main 
+main.main-details {
+	section.table {
+		background-color: $hover-description-color;
+	}
+	.table {
+		width: 100%;
+		color: $darken-white;
+		text-align: center;
+		table-layout: fixed;
+		padding-bottom: 40px;
+		padding-top: 40px;
+		margin: 0;
+		span {
+			font-size: 1rem;
+		}
+		.top-row {
+			color: $white;
+			background-color: $number-color;
+		}
+		td {
+			font-size: 1.3rem;
+			color: #43AC6A;
+			.fa-minus {
+				color: $hover-description-color;
+			}
+		}
+		th {
+			text-align: center;
+			background-color: $hover-description-color;
+		}
+		.btn {
+			@include button-main;
+			border-radius: 0;
+			width: 100%;
+			background-color: $number-color;
+			color: $white;
+			margin: 0;
+			&:hover {
+				background-color: $hover-description-color;
+			}
+		}
+	}
+	//section services
+	section.services {
+		h3 {
+			padding-top: 70px;
+			color: $main-color;
+		}
+		.btn {
+			@include button-main;
+		}
+		.table-services {
+			border: 1px solid $border-color;
+			margin-top: 50px;
+			.col-4 {
+				text-align: center;
+				min-height: 200px;
+				position: relative;
+				h5 {
+					position: absolute;
+					top: 40%;
+
+				}
+				p {
+					position: absolute;
+					top: 70%;
+					left: 40%;
+				}
+			}
+			.col-4:nth-of-type(odd) {
+				background-color: $main-color;
+				color: $white;
+			}
+		}
+	}
+	//section used-technologies
+	section.used-technologies {
+		h3 {
+			color: $main-color;
+			padding-top: 60px;
+			padding-bottom: 60px;
+		}
+		.btn {
+			@include button-main;
+		}
+	}
+}  
 @import "media";// Всегда в конце

@@ -1,0 +1,10 @@
+<?php
+$res = $modx -> getObject('modResourse', 1);
+$tvs = $res -> getMany('modTemplateVarResource');
+foreach ($tvs as $key => $tv) {
+    $tvs[$key] = $tv -> toArray();
+}
+print '<pre>';
+print_r($tvs);
+
+

@@ -17,6 +17,18 @@ $(function() {
            menu_mobile.slideToggle();
            subMenuMobile.hide(150);
        });
+           //scroll top menu modification
+	   $(window).scroll(function () {
+		   if ($(this).scrollTop() > 90){
+		   	$('.logo').hide(200);
+		   	$('.align-items-center, .phone-description').css({'height': '60'});
+		   	$('.phone-description > .description').hide(200);
+		   } else if($(this).scrollTop() < 90){
+		   	$('.logo').show(200);
+               $('.align-items-center, .phone-description').css({'height': '90'});
+               $('.phone-description > .description').show(200);
+		   }
+       });
            //mobile buttton slide toggle function
           		 function handler(event) {
           		 	var target = $(event.target);
