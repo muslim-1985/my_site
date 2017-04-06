@@ -75,13 +75,37 @@
 			}
 		}
 	}
+
+	//details html
+	main.main-details {
+		.table {
+			display: none !important;
+		}
+		section.table-mobile {
+			display: block;
+		}
+		section.services {
+			h3 {
+				font-size: 1.1rem;
+			}
+			h5 {
+				font-size: 1rem;
+			}
+			p {
+				font-size: 0.9rem;
+			}
+		}
+		section.used-technologies {
+			display: none;
+		}
+	}
 }
 
 //main home page
 
 main.home-main {
 
-  section.stock {	
+  section.stock {
 	.stock-attention {
 		width: 20em !important;
 		height: 20em !important;
@@ -129,6 +153,8 @@ main.home-main {
 
   }
 }
+
+
 
 @media only screen and (max-width : 898px) {
        section.infographics {
@@ -270,6 +296,23 @@ main.home-main {
 
   }
 
+	//details html
+	main.main-details {
+		section.services {
+			h5 {
+				font-size: 1.3rem;
+			}
+			p {
+				font-size: 1.1rem;
+			}
+			.btn {
+				width: 140px;
+				height: 40px;
+				font-size: 1rem;
+				margin-top: 15px;
+			}
+		}
+	}
 footer {
 	.social-buttons>div {
 		display: inline-block !important;
