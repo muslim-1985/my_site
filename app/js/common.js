@@ -103,4 +103,12 @@ $(function() {
        		  //phone mask
        		   $("#phone").mask("+7(999) 999-9999"); 
        		   $("#phone-mask").mask("+7(999) 999-9999");
+       		   //form description animation
+			$('input').focus(function(){
+                    $(this).prev('span').animate({top: '20', right: '30', fontSize: '0.8rem'});
+			}).blur(function(){
+				if ($(this).val() === "") {
+                    $(this).prev('span').animate({top: '36', right: '0', fontSize: '1rem'});
+                }
+            });
 });
