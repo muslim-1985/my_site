@@ -15,7 +15,6 @@ $(function() {
            $(touch).on('click', function(e) {
            e.preventDefault();
            menu_mobile.slideToggle();
-           subMenuMobile.hide(150);
        });
            //scroll top menu modification
 	   $(window).scroll(function () {
@@ -52,12 +51,8 @@ $(function() {
        			autoplayTimeout: 4000,
        			smartSpeed: 2000,
        			navText: false,
-       			loop: true,
-       			smartSpeed: 700
-       		}); 
-       		//owl carousel trigger nav in section servises
-       		var owl = $('.carousel-servises');
-       		owl.owlCarousel();
+       			loop: true
+       		});
        		// Go to the next item
        		$('.owl-next').click(function() {
        		    owl.trigger('next.owl.carousel');
@@ -90,7 +85,7 @@ $(function() {
        		  })
        		  $('.owl-prev').click(function() {
        		      owl.trigger('prev.owl.carousel', [300]);
-       		  }) 
+       		  })
 
        		  //magnific-popup
        		  $('.popup-with-form').magnificPopup({
@@ -105,10 +100,17 @@ $(function() {
        		   $("#phone-mask").mask("+7(999) 999-9999");
        		   //form description animation
 			$('input').focus(function(){
-                    $(this).prev('span').animate({top: '20', right: '30', fontSize: '0.8rem'});
+                    $(this).prev('label').animate({top: '20', right: '30', fontSize: '0.8rem'});
 			}).blur(function(){
 				if ($(this).val() === "") {
-                    $(this).prev('span').animate({top: '36', right: '0', fontSize: '1rem'});
+                    $(this).prev('label').animate({top: '46', right: '0', fontSize: '1rem'});
                 }
             });
+			//blog.html left sidebar dropdown function
+			$('body').click(function(event) {
+					var target = $(event.target);
+					if(target.is('.menu-item>span')) {
+						target.siblings('.articles').slideToggle();
+					}
+    });
 });

@@ -95,9 +95,9 @@ header {
 	.top-menu {
 		height: 90px;
 		background-color: $white;
-		border-bottom: 2px solid $section-light-color;
 		.align-items-center {
 			position: fixed;
+			border-bottom: 2px solid $section-light-color;
 			background-color: $white;
 			width: 100%;
 			z-index: 2;
@@ -653,9 +653,10 @@ footer {
 	 padding-top: 3em !important;
 	 opacity: 1;
 	form {
-		span {
+		label {
 			position: relative;
-			top: 36px;
+			cursor: pointer;
+			top: 46px;
 			padding: 0;
 		}
 		input {
@@ -854,5 +855,65 @@ main.main-details {
 			margin-top: 15px;
 		}
 	}
-}  
+}
+
+//blog.html
+body.blog {
+	header {
+		min-height: 90px;
+	}
+	main {
+	  .items {
+		  margin-top: 70px;
+		  margin-bottom: 60px;
+		  h2 {
+			  margin-top: 60px;
+			  margin-bottom: 40px;
+		  }
+			  img {
+				  width: 100%;
+			  }
+	      }
+	.sidebar {
+		background-color: black;
+		padding: 0;
+		margin-bottom: 60px;
+
+		.left-sidebar {
+			margin-top: 70px;
+			width: 100%;
+			padding: 0;
+			li {
+				list-style: none;
+				border-bottom: 1px solid $darken-white;
+				width: 100%;
+				padding-top: 25px;
+				 span {
+					 color: $number-color;
+					 cursor: pointer;
+				 }
+				.fa {
+					color: $number-color;
+					font-size: 1.1rem;
+				}
+				.articles {
+					display: none;
+					li {
+						list-style: none;
+						border: none;
+						padding-top: 7px;
+						font-size: 0.8rem;
+						a {
+							color: $number-color;
+						}
+					}
+				}
+			}
+		}
+	   }
+		nav {
+			margin-bottom: 40px;
+		}
+	}
+}
 @import "media";// Всегда в конце
