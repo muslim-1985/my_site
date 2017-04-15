@@ -165,16 +165,19 @@ header {
 		li {
 			display: inline-block;
 			box-sizing: border-box;
-			margin: 0 auto;
-			padding-left: 45px;
+			margin-left: 35px;
 			transition: all 0.6s;
 			
 			a {
 				text-decoration: none;
 				color: $main-color;
+				display: block;
+				padding: 10px;
+				transition: all 0.4s;
 				&:hover {
-					transition: all 0.15s;
-					color: #706F6F; 
+					border-radius: 12%;
+					background-color: $main-color;
+					color: whitesmoke;
 				}
 			}	
 		}
@@ -883,27 +886,45 @@ body.blog {
 			padding: 0;
 			li {
 				list-style: none;
+				position: relative;
 				border-bottom: 1px solid $darken-white;
+				margin-top: 15px;
 				width: 100%;
 				padding-top: 25px;
-				 span {
+				 a {
 					 color: $number-color;
-					 cursor: pointer;
+					 outline: none;
 				 }
 				.fa {
 					color: $number-color;
 					font-size: 1.1rem;
 				}
 				.articles {
+					position: absolute;
 					display: none;
+					top: 0;
+					left: 120px;
+					min-width: 300px;
+					z-index: 2;
+					background-color: black;
+					opacity: 0.9;
+					transition: all 0.8s ease-out;
+
 					li {
 						list-style: none;
 						border: none;
-						padding-top: 7px;
+						padding: 5px;
 						font-size: 0.8rem;
+						transition: all 0.8s ease-out;
 						a {
 							color: $number-color;
+							top: 10px;
 						}
+					}
+				}
+				&:hover {
+					.articles {
+						display: block;
 					}
 				}
 			}
@@ -920,6 +941,30 @@ main.main-blog {
 	h2 {
 		margin-top: 60px;
 		margin-bottom: 40px;
+	}
+}
+//description.html
+main.main-description {
+	.container {
+		margin-top: 60px;
+		margin-bottom: 40px;
+	    h2 {
+			margin-bottom: 40px;
+		}
+	}
+}
+//reviews.html
+main.main-reviews {
+	.review-item {
+		margin-top: 50px;
+		margin-bottom: 40px;
+
+		.col-9 {
+			background-color: whitesmoke;
+		}
+		img {
+			width: 100%;
+		}
 	}
 }
 @import "media";// Всегда в конце
